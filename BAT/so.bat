@@ -7,13 +7,13 @@ color 80
 date /t
 
 echo Computador: %computername%        Usuario: %username%
-                   
-echo            MENU TAREFAS
+
+echo            MENU DE OPÇÕES
 echo  ----------------------------------
 echo \ 1. Abrir Github                  /
 echo \ 2. MONKEY?????                   /
 echo \ 3. Linkedin                      /
-echo \ 4. Nova anotacao                 /
+echo \ 4. Nova pasta                    /
 echo \ 5. Sair                          / 
 echo  ----------------------------------
 
@@ -58,7 +58,7 @@ goto menu
 md Anotação.txt
 start Anotação.txt
 echo -----------------------------------
-echo \         Anotacao aberta         /
+echo \          Pasta criada           /
 echo  ---------------------------------
 pause
 goto menu
@@ -68,8 +68,8 @@ cls
 exit
 
 :opcao6
-echo ==============================================
-echo * Opcao Invalida! Escolha outra opcao do menu *
-echo ==============================================
+echo -----------------------------------------------
+echo \ Opcao Invalida! Escolha outra opcao do menu /
+echo  ---------------------------------------------
 pause
-goto menu
+goto menu 
