@@ -1,0 +1,78 @@
+f = [[1,12,10,20,1,1],
+     [2,10,1,12,1,0],
+     [3,11,2,21,1,0],
+     [4,12,0,22,1,0]]
+
+#FIFO - Não consegui entender bem o conceito
+
+print('FIFO')
+
+min = f[0][1]
+s  = 0
+for i in range(len(f)):
+  j = f[i][1]
+  
+  if j < min:
+    min = j
+    s = f[i][0]
+  i = i + 1
+print('Tempo de carga:', min)
+print('Frame:', s)
+
+print(' ')
+#LFU
+print('LFU')
+
+max = f[0][1]
+p  = 0
+for q in range(len(f)):
+  u = f[q][2]
+  
+  if u < max:
+    max = u
+    p = f[q][0]
+  q = q + 1
+print('Quantidade Referências:', max)
+print('Frame:', p)
+
+print(' ')
+#LRU
+print('LRU')
+
+m = f[0][1]
+t  = 0
+for h in range(len(f)):
+  o = f[h][3]
+  
+  if o > m:
+    m = o
+    t = f[h][0]
+  h = h + 1
+print('Tempo da última referência:', m)
+print('Frame: ', t)
+
+print(' ')
+#NRU
+print('NRU')
+
+g = f[0][1]
+l  = 0
+for a in range(len(f)):
+  v = f[a][4]
+  n = f[a][5]
+  
+  if v == 0 and n == 0:
+    l = f[a][0]
+    break
+  a = a + 1
+  
+for a in range(len(f)):
+  v = f[a][4]
+  n = f[a][5]
+  
+  if v == 1 and n == 0:
+    l = f[a][0]
+    break
+  a = a + 1
+print('BR:', v,'BM:', n )
+print('Frame:', l)
